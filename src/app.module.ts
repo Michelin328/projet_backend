@@ -17,6 +17,9 @@ import { ArchivesModule } from './archives/archives.module';
         url: config.get<string>('DATABASE_URL'),
         autoLoadEntities: true,
         synchronize: true,
+        ssl: {
+          rejectUnauthorized: false,
+        },
       }),
     }),
     PatientsModule,
